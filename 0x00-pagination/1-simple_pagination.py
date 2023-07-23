@@ -1,3 +1,7 @@
+"""
+Defines a Server module and index_range function
+"""
+
 import csv
 import math
 from typing import List
