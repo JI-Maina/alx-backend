@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 Defines a Server module and index_range function
 """
