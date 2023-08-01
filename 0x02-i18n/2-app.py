@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from flask_babel import Babel
 
 
@@ -19,7 +19,13 @@ babel = Babel(app)
 @app.route("/")
 def index() -> str:
     """Defines homepage"""
-    return render_template('1-index.html')
+    return render_template("2-index.html")
+
+
+@babel.localeselector
+def get_locale() -> str:
+    """determines the best match with our supported languages"""
+    return request.accept_languages.best_match(app.config['LANGUAGES'])
 
 
 if __name__ == "__main__":
