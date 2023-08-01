@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+"""Initializes a flask app and index route 
+"""
 from flask import Flask, render_template
 
 
