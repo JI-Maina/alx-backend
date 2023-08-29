@@ -11,11 +11,11 @@ client.on('connect', () => {
 });
 
 function setNewSchool(schoolName, value) {
-  client.set(schoolName, value, print);
+  client.SET(schoolName, value, print);
 }
 
 function displaySchoolValue(schoolName) {
-  client.get(schoolName, (err, res) => {
+  client.GET(schoolName, (err, res) => {
     console.log(res);
   });
 }
